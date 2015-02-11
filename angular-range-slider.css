@@ -1,0 +1,55 @@
+.angular-range-slider {
+  display: inline-block;
+  position: relative;
+  height: 7px;
+  width: 100%;
+  margin: 25px 5px 25px 5px;
+  vertical-align: middle; }
+  .angular-range-slider div {
+    white-space: nowrap;
+    position: absolute; }
+    .angular-range-slider div.bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+      background: #444;
+      overflow: hidden; }
+      .angular-range-slider div.bar .selection {
+        width: 0%;
+        height: 100%;
+        background: #13b6ff; }
+    .angular-range-slider div.handle {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      top: -8px;
+      background-color: #fff;
+      border: 1px solid #000;
+      z-index: 2;
+      border-radius: 100%; }
+      .angular-range-slider div.handle:after {
+        content: '';
+        background-color: #777;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        border-radius: 100%; }
+        .angular-range-slider div.handle:after:hover {
+          background-color: #000; }
+      .angular-range-slider div.handle.active:after {
+        background-color: #f00; }
+    .angular-range-slider div.bubble {
+      display: none;
+      cursor: default;
+      top: -22px;
+      padding: 1px 3px 1px 3px;
+      font-size: 0.7em;
+      font-family: sans-serif; }
+      .angular-range-slider div.bubble.active {
+        display: inline-block; }
+      .angular-range-slider div.bubble.limit {
+        color: #777; }
+
+/*# sourceMappingURL=angular-range-slider.css.map */
