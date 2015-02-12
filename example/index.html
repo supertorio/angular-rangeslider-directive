@@ -2,11 +2,11 @@
 <html id="ng-app" data-ng-app="app">
 
 <head>
-    <title>Single Control Slider Example</title>
+    <title>Angular Range Slider Examples</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../angular-range-slider.css">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
-    <script src="../src/angular-range-slider.js"></script>
+    <script src="../angular-range-slider.min.js"></script>
     <script src="controllers.js"></script>
 </head>
 
@@ -22,6 +22,7 @@
                      data-ceiling="1000"
                      data-step="50"
                      data-precision="2"
+                     data-highlight="left"
                      data-ng-model="items[0].value"></div>
             </div>
         </section>
@@ -34,6 +35,7 @@
                 <div data-range-slider
                      data-floor="100"
                      data-ceiling="1000"
+                     data-dragstop="true"
                      data-ng-model-low="items[1].value"
                      data-ng-model-high="items[2].value"></div>
             </div>

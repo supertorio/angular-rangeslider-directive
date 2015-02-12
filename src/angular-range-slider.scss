@@ -1,9 +1,13 @@
-$height: 7px;
+
+$sliderBarHeight: 10px; // Thickness of range bar
+$sliderBarColor: #444; // Background color of range bar
+$sliderHandleWidth: 40px; // Diameter of range handles
+$sliderHighlightColor: #13b6ff; // Highlight color for selection and range handles
 
 .angular-range-slider {
 	display: inline-block;
 	position: relative;
-	height: $height;
+	height: $sliderBarHeight;
 	width: 100%;
 	margin: 25px 5px 25px 5px;
 	vertical-align: middle;
@@ -15,51 +19,36 @@ $height: 7px;
 		&.bar {
 			width: 100%;
 			height: 100%;
-			border-radius: $height;
-			background: #444;
+			border-radius: $sliderBarHeight;
+			background: $sliderBarColor;
 			overflow: hidden;
 
 			.selection {
-				width: 0%;
+				width: 0;
 				height: 100%;
-				background: #13b6ff;
+				background: $sliderHighlightColor;
 			}
 		}
 
 		&.handle {
 			cursor: pointer;
-			width: 20px;
-			height: 20px;
-			top: -8px;
-			background-color: #fff;
-			border: 1px solid #000;
+			width: $sliderHandleWidth;
+			height: $sliderHandleWidth;
+			top: ($sliderBarHeight - $sliderHandleWidth)/2;
+			background-color: $sliderHighlightColor;
+			border: 6px solid #000;
 			z-index: 2;
 			border-radius: 100%;
 
-			&:after {
-				content: '';
-				background-color: #777;
-				width: 8px;
-				height: 8px;
-				position: absolute;
-				top: 6px;
-				left: 6px;
-				border-radius: 100%;
-
-				&:hover {
-					background-color: #000;
-				}
-			}
-
-			&.active:after {
-				background-color: #f00;
+			&.active {
+				background-color: darken($sliderHighlightColor, 20);
 			}
 		}
 
 		&.bubble {
 			display: none;
 			cursor: default;
-			top: -22px;
+			top: $sliderHandleWidth * -.8;
 			padding: 1px 3px 1px 3px;
 			font-size: 0.7em;
 			font-family: sans-serif;
