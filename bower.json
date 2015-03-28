@@ -1,0 +1,20 @@
+{
+  "name": "angular-rangeslider-directive",
+  "version": "0.0.2",
+  "homepage": "https://github.com/supertorio/angular-rangeslider-directive",
+  "authors": [
+    "Tori Holmes-Kirk http://www.toriholmeskirk.com"
+  ],
+  "description": "Range Slider Control Directive for Angular",
+  "main": "src/angular-range-slider.js",
+  "keywords": [
+    "Angular",
+    "Range",
+    "Slider",
+    "Directive"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.0"
+  }
+}

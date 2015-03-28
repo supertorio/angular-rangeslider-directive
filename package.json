@@ -1,7 +1,7 @@
 {
-  "name": "angular-range-slider",
+  "name": "angular-rangeslider-directive",
   "version": "0.0.1",
-  "description": "Range Slider Control for Angular",
+  "description": "Range Slider for Angular",
   "main": "angular-range-slider.js",
   "directories": {
     "example": "example"

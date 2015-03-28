@@ -1,7 +1,7 @@
-angular-range-slider
+angular-rangeslider-directive
 ==============
 
-Stylable Range Slider Control directive for Angular with no jQuery or browser dependencies.
+Styleable Range Slider Control directive for Angular with no jQuery or browser dependencies.
 Does not use the input range type. Allows for binding to model data.
 
 ## Usage
