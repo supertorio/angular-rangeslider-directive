@@ -65,8 +65,8 @@
       restrict: 'EA',
 
       scope: {
-        floor       : '@',
-        ceiling     : '@',
+        floor       : '=?',
+        ceiling     : '=?',
         step        : '@',
         highlight   : '@',
         precision   : '@',
