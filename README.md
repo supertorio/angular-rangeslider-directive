@@ -47,6 +47,7 @@ Does not use the input range type. Allows for binding to model data.
 * __ngModel__ `{number}` Bound value for a single handle slider
 * __ngModelLow__ `{number}` Bound value for lower limit of range selection
 * __ngModelHigh__ `{number}` Bound value for upper limit of range selection
+* __disabled__ `{boolean}` Bound value for disable element
 
 
 ### License: MIT

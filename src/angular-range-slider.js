@@ -74,7 +74,8 @@
         dragstop    : '@',
         ngModel     : '=?',
         ngModelLow  : '=?',
-        ngModelHigh : '=?'
+        ngModelHigh : '=?',
+		    disabled    : '=?'
       },
 
       link : function(scope, element, attrs) {
@@ -158,6 +159,23 @@
 
         var updateDOM = function () {
           updateCalculations();
+		  
+    		  if (scope.disabled){
+    			  highBubble.addClass('disable');
+    			  lowBubble.addClass('disable');
+    			  lowPointer.addClass('disable');
+    			  highPointer.addClass('disable');
+    			  bar.addClass('disable');
+    			  highlight.addClass('disable');
+    		  }
+    		  else {
+    			  highBubble.removeClass('disable');
+    			  lowBubble.removeClass('disable');
+    			  lowPointer.removeClass('disable');
+    			  highPointer.removeClass('disable');
+    			  bar.removeClass('disable');
+    			  highlight.removeClass('disable');
+    		  }
 
           var percentOffset = function (offset) {
             return contain(((offset - minOffset) / offsetRange) * 100);
@@ -208,6 +226,14 @@
           };
 
           var bind = function (handle, bubble, ref, events) {
+			  
+    			  // Check if element disabled
+    			  if (scope.disabled){
+    				  bubble.addClass('disable');
+    				  handle.addClass('disable');
+    				  bar.addClass('disable');
+    				  highlight.addClass('disable');
+    			  }
 
             var currentRef = ref;
 
@@ -225,7 +251,11 @@
             };
 
             var onMove = function (event) {
-
+      			  // Check if element disabled
+      			  if (scope.disabled){
+      				  return;
+      			  }
+			  
               // Suss out which event type we are capturing and get the x value
               var eventX = 0;
               if (event.clientX !== undefined) {
@@ -285,8 +315,8 @@
 
             var onStart = function (event) {
               updateCalculations();
-              bubble.addClass('active');
-              handle.addClass('active');
+      			  bubble.addClass('active');
+      			  handle.addClass('active');
               setPointers();
               event.stopPropagation();
               event.preventDefault();
@@ -323,6 +353,7 @@
 
         // Watch Models based on mode
         scope.$watch(low, updateDOM);
+		    scope.$watch('disabled', updateDOM);  
 
         if (currentMode === modes.range) {
           scope.$watch(high, updateDOM);
