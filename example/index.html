@@ -40,6 +40,22 @@
                      data-ng-model-high="items[2].value"></div>
             </div>
         </section>
+		
+		<button ng-click="change()"> Disable toggle </button>
+		<section class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Dsiabled Range Slider Example</h1>
+                <p>Value 1: {{items[3].value}}</p>
+                <p>Value 2: {{items[4].value}}</p>
+                <div data-range-slider
+                     data-floor="100"
+                     data-ceiling="1000"
+                     data-dragstop="true"
+                     data-ng-model-low="items[3].value"
+                     data-ng-model-high="items[4].value"
+					 disabled="isDisabled"></div>
+            </div>
+        </section>
 
     </div>
 

@@ -14,10 +14,15 @@
       border-radius: 10px;
       background: #444;
       overflow: hidden; }
+      .angular-range-slider div.bar.disable{
+        background-color: #c0bfc0;
+        background: #c0bfc0;}
       .angular-range-slider div.bar .selection {
         width: 0;
         height: 100%;
         background: #13b6ff; }
+      .angular-range-slider div.bar .selection.disable{
+        background-color: gray;}
     .angular-range-slider div.handle {
       cursor: pointer;
       width: 40px;
@@ -29,6 +34,8 @@
       border-radius: 100%; }
       .angular-range-slider div.handle.active {
         background-color: #0077ac; }
+      .angular-range-slider div.handle.disable {
+        background-color: #c0bfc0; }  
     .angular-range-slider div.bubble {
       display: none;
       cursor: default;
@@ -38,7 +45,10 @@
       font-family: sans-serif; }
       .angular-range-slider div.bubble.active {
         display: inline-block; }
+      .angular-range-slider div.bubble.disable {
+        background-color: #c0bfc0;  }
       .angular-range-slider div.bubble.limit {
         color: #777; }
+
 
 /*# sourceMappingURL=angular-range-slider.css.map */
